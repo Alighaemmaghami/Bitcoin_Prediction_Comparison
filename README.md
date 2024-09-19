@@ -11,5 +11,17 @@ price as the forecast of today’s price. Prophet, LSTM and
 CNN after a transformation performed more accurate. We
 add a simple algorithm that can give us trading orders that
 performs 5% better than long-term buy and hold strategy,
-which is a significant improvement
+which is a significant improvement.
+
+## 1. Introduction
+Time series forecasting has been dominated by linear
+methods because they are well understood and effective on
+many simpler forecasting problems. However, by using
+deep learning we are able to automatically learn arbitrary
+complex mappings from inputs to outputs [1]. The bitcoin
+price prediction that has been worked on in this project is a
+regression problem, where the prediction model predicts the
+next Bitcoin price based on the previous. We studied, implemented and compared various Machine Learning and deep
+learning methods, such as, prophet, Convolutional Neural
+Network (CNN) and long short-term memory (LSTM).
 
