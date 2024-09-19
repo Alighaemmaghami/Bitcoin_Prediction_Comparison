@@ -46,5 +46,6 @@ were aligned, and no further action was required.
 The dataset is divided to 80% of training and validation
 , and 20% for test data, Figure 1.
 
+### 2.2. Checking the stationarity of data
 
 
