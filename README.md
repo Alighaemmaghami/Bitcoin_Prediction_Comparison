@@ -39,6 +39,7 @@ the target variable.
 The dataset is divided to 80% of training and validation
 , and 20% for test data, Figure 1.
 ![Figure 1. Data Division](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_1_Data_Division.png)
+
 Figure 1. Data division
 
 A figure of the ’Close’ price and the ’Volume’ is plotted
