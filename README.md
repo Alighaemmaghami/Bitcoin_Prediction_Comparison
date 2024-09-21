@@ -233,6 +233,25 @@ model performed a little better and could outperform yesterday’s price. It is 
 dependent on the previous prices and follows the previous
 prices.
 
+## Appendix
+![Figure 6. Rolling Mean and Standard Deviation Base Data]
+(https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_6_Rolling_Mean_and_Standard_Deviation_base_Data.png)
+
+Figure 6. Rolling Mean and Standard Deviation Base Data
+
+![Figure 7. Rolling Mean and Standard Deviation After Transformation]
+(https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_7_Rolling_Mean_and_Standard_Deviation_After_Transformation.png)
+
+Figure 7. Rolling Mean and Standard Deviation After Transformation
+
+![Figure 8. Plot of Close Price and Volume]
+(https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_8_Plot_of_Close_Price_and_Volume.png)
+
+Figure 8. Plot of Close Price and Volume
+
+
+
+
 ## References
 [1] https://machinelearningmastery.com/deep-learning-for-timeseries-forecasting/
 
