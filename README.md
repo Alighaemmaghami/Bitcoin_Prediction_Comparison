@@ -143,3 +143,95 @@ predict the behaviour of the price and other external factors
 better. In that situation, it can memorize the behaviour of
 not just one lagged values but six values and it employs that
 as a positive factor for forecasting the tomorrow’s price.
+
+### 2.3.2 Prophet
+Prophet is a timeseries modeling based on additive regressive model (GAM Formulation) to predict trends by considering yearly, weekly, and daily seasonality effects. It fits
+models in Stan which is a platform for statistical modeling.
+Since this modeling considers seasonality as an important
+factor, we divided our data to different seasons to evaluate
+and compare the model results in various seasonalities. In
+terms of preprocessing the data, Prophet can handle missing
+data, however, we did not have any missing values. Also,
+we renamed columns “Date” and “Close” to “ds” and ”y” to
+achieve an acceptable input for Prophet model. Moreover,
+Prophet contains cross validation to assess forecast error by
+using historical data. In our project, we chose some cutoff
+points in the history indicating the validation sections for
+fitting the model so that we could make a comparison between the actual values and predicted values. The output
+of this procedure is a data frame with actual(y) and predicted(yhat) values.
+
+
+### 2.3.3 CNN
+Convolutional Neural Network models, or CNNs for short,
+normally are used for two-dimensional image data. However, CNNs can be used to model univariate time series forecasting problems too. The CNN model will learn a function
+that maps a sequence of past observations as input to an
+output observation. In this project, we have considered a
+window size of 60 days to split our data into sequences. In
+the process of preparing the data we manually set the seed
+to 0 to provide a better reproducibility through all the platforms and scaled it with MinMaxScaler from scikit-learn
+package. Using the PyTorch package we defined our cnn
+model. Since the time series data is univariate it only has
+one convolutional layer with in channels equal to the window size, out channels equal to 1 and it has 128 hidden layers which is equal to the batch size. This batch size has been
+chosen arbitrarily. The model is activated by a ReLU function. In order to be used in PyTorch Sequential, we have
+flatten the range of dims into a tensor. To define the hidden
+fully connected linear layer and we apply the PyTorch Linear function to transform it by the equation y = x * AT +
+b.
+
+### 2.3.4 Long Short-term Memory Model
+The Long Short-Term Memory (LSTM) Neural Network is
+another algorithm chosen for this analysis. Deep learning
+recurrent neural networks (RNNs) such as LSTM are commonly used to predict time series data. Due to the LSTM’s
+logic gates (input, output, and forget gates), it is capable of retaining important information and deleting unnecessary
+information, making it a useful model for interpreting patterns over time. This model was built with Keras, using the
+Sequential class and stacking different LSTM layers. Also,
+for preventing over fitting after every LSTM layer we used
+dropout layer.
+
+Having scaled the data in the manner described in section 2.2, we reorganize the training data to make it suitable
+for LSTM training. In order to do this, we defined each observation of training set as an array containing the past 90
+observations that will be used to predict the next day’s price.
+
+## 2.4. Results
+### 2.4.1 Model Comparisons
+The evaluation metrics that have been used in this project
+are Mean absolute error(MAE) and Root-mean-square deviation(RMSE due to the fact that predicting price in time
+series is a regression problem. However, we haven’t used r2ˆ
+score.
+
+### 2.4.2 Let’s make some money
+In the last section, LSTM was trained most successfully, but
+when will it be profitable? We decided to test this model
+to see whether it would be possible to invest money in it
+(please don’t!). Using $100000 as base money, we made an
+algorithm that buys as much stock as possible when the next
+day’s price movement is predicted to move over 0.5% upward and sells as much stock as possible when it is predicted
+to move over 0.5% downward. In total, we were able to earn
+$683408 from the prediction, compared to $648790 from
+the buy and hold strategy, translating into a $34618 profit.
+In Figure. 3, you can see the buys (green arrows)/sells (red
+arrows) made by the model on the actual test set, while the
+Figure 4 shows the percentage change (of the next day prediction) during the same period.
+
+## 3. Conclusions
+Generally, machine and deep learning algorithms are
+not the best approach to develop trading models. However, the automate process and reinforcement learning of
+the deep learning makes it a very interesting approach and it may yield productive, profitable results in future works [5].
+We kept experimenting different approaches to improve the
+models. The most interesting change was when we added
+seasonality and changed our data scaler and as a result the
+performance of all the models improved significantly since
+it omitted the effect of extreme price changes.
+As it can be seen in Figure. 5 our models followed the trends
+very well and can capture most of the changes. Regression
+model performed a little better and could outperform yesterday’s price. It is probably because the price is extremely
+dependent on the previous prices and follows the previous
+prices.
+
+## References
+[1] https://machinelearningmastery.com/deep-learning-for-timeseries-forecasting/
+[2] https://coinmarketcap.com/historical/20210226/
+[3] Uras, N., Marchesi, L., Marchesi, M., and Tonelli, R. (2020).Forecasting Bitcoin closing price series using linear regression
+and neural networks models. PeerJ Computer Science, 6, e279.
+[4] https://people.duke.edu/ rnau/411arim.htm
+[5] https://towardsdatascience.com/using-neural-networks-topredict-stock-prices-dont-be-fooled-c43a4e26ae4e
+
