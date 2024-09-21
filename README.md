@@ -35,8 +35,12 @@ any missing values. Moreover, the ‘Close’ and ‘Adj Close’
 columns are identical because Cryptocurrency prices differ
 from traditional stock prices. So ‘Close’ price is chosen as
 the target variable.
-![Figure 2. Plot of Close Price and Volume](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_2_Plot_of_Close_Price_and_Volume.png)
-Figure 2. Plot of Close Price and Volume
+
+The dataset is divided to 80% of training and validation
+, and 20% for test data, Figure 1.
+![Figure 1. Data Division](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_1_Data_Division.png)
+Figure 1. Data division
+
 
 A figure of the ’Close’ price and the ’Volume’ is plotted
 to look for any visual anomalies and as it is shown in Figure
@@ -44,8 +48,11 @@ to look for any visual anomalies and as it is shown in Figure
 February 2021 - around triple of its normal value. So by
 checking out different data sources [2], we found that they
 were aligned, and no further action was required.
-The dataset is divided to 80% of training and validation
-, and 20% for test data, Figure 1.
+![Figure 2. Plot of Close Price and Volume](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_2_Plot_of_Close_Price_and_Volume.png)
+Figure 2. Plot of Close Price and Volume
+
+
+
 
 ### 2.2. Checking the stationarity of data
 Stationary time series are defined as those whose statistical properties such as mean and variance remain unchanged over time. Our verification of time-series stationarity is necessary because a time series model cannot be
