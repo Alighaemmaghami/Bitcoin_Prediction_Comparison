@@ -36,8 +36,7 @@ columns are identical because Cryptocurrency prices differ
 from traditional stock prices. So ‘Close’ price is chosen as
 the target variable.
 ![Figure 2. Plot of Close Price and Volume](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_2_Plot_of_Close_Price_and_Volume.png)
-
-
+Figure 2. Plot of Close Price and Volume
 
 A figure of the ’Close’ price and the ’Volume’ is plotted
 to look for any visual anomalies and as it is shown in Figure
