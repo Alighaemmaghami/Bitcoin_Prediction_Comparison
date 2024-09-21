@@ -235,7 +235,7 @@ prices.
 [3] Uras, N., Marchesi, L., Marchesi, M., and Tonelli, R. (2020).Forecasting Bitcoin closing price series using linear regression
 and neural networks models. PeerJ Computer Science, 6, e279.
 
-[4] https://people.duke.edu/ rnau/411arim.htm
+[4] https://people.duke.edu/rnau/411arim.htm
 
 [5] https://towardsdatascience.com/using-neural-networks-topredict-stock-prices-dont-be-fooled-c43a4e26ae4e
 
