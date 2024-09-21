@@ -218,6 +218,14 @@ In Figure. 3, you can see the buys (green arrows)/sells (red
 arrows) made by the model on the actual test set, while the
 Figure 4 shows the percentage change (of the next day prediction) during the same period.
 
+[Figure 3. Graph of Buy/Sell Timestamps on Test Set](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_3_Graph_of_Buy_Sell_Timestamps_on_Test_Set.png)
+
+Figure 3. Graph of Buy/Sell Timestamps on Test Set
+
+[Figure 4. Next Day Prediction Percentage Change](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_4_Next_Day_Prediction_Percentage_Change.png)
+
+Figure 4. Next Day Prediction Percentage Change
+
 ## 3. Conclusions
 Generally, machine and deep learning algorithms are
 not the best approach to develop trading models. However, the automate process and reinforcement learning of
