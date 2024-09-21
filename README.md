@@ -93,3 +93,53 @@ can implement our predictive models.
 This section provides brief explanation of the methods
 that are used for the goal of this project.
 
+### 2.3.1 Linear Regression
+Linear Regression models are considered to be the classical
+options for forecasting the stock prices. Different scenarios
+can be used using Linear Regression models. For univariate series forecasting, which uses only closing prices, use
+the Simple Linear Regression (SLR) model, and the Multiple Linear Regression (MLR) model, which uses both price
+and volume data [3].
+
+We built our dataset for both models so that we had a set of
+inputs (X) and outputs (Y) that were temporally dependent.
+We used a one-step ahead forecast, in which the output Y is
+the value from the next (future) point in time, and the inputs
+X are one or more values from the past, i.e., lagged values.
+The dataset for the Linear Regression and Univariate LSTM
+models only contains the daily closing price series, hence
+the close feature has only one lag parameter. The dataset
+comprises both close and volume (USD) series in the Multiple Linear Regression and Multivariate LSTM models, thus
+we utilise two separate lag settings, one for the close and
+one for the volume feature [3].
+
+We consider 5 different scenarios:
+1. Forecasting with lagged prices up to 10 days
+2. Forecasting with lagged prices and moving average of 3
+and 9 days
+3. Forecasting with lagged prices and volume values up to
+10 days and moving average of 3 and 9 days
+4. Forecasting with relative changes of values of lagged
+prices up to 10 days (Return(t) = P(t)/P(t-1))
+5. Forecasting with polynomial model with lagged prices
+up to 10 days
+
+We trained these 5 scenarios each of which one to 10
+days lagged prices. Interestingly, the 4th scenario which uses the return value of each day works better in here, probably because it reduces the effect of absolute value of price
+in different times. Another, interesting finding is that the
+first three scenario work better when just using the last
+lagged data; adding more data than the yesterday’s price
+will reduce the performance of the model.
+However, this does not apply to the fourth and fifth scenarios. The fifth scenario that uses a polynomial model
+works better when it uses the first three lagged values; but
+in general this model does not work well probably because
+of over-fitting.
+
+The fourth scenario works better. It uses the return values
+instead of absolute values. This model works better when
+we use six previous lagged values. We can interpret that by
+using return values instead of absolute values we reduce the
+effects of changing the absolute price and let the model to
+predict the behaviour of the price and other external factors
+better. In that situation, it can memorize the behaviour of
+not just one lagged values but six values and it employs that
+as a positive factor for forecasting the tomorrow’s price.
