@@ -41,7 +41,6 @@ The dataset is divided to 80% of training and validation
 ![Figure 1. Data Division](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_1_Data_Division.png)
 Figure 1. Data division
 
-
 A figure of the ’Close’ price and the ’Volume’ is plotted
 to look for any visual anomalies and as it is shown in Figure
 2, There was a significant spike in Volume on the 26th of
