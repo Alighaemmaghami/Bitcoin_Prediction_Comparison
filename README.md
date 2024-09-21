@@ -49,5 +49,47 @@ The dataset is divided to 80% of training and validation
 , and 20% for test data, Figure 1.
 
 ### 2.2. Checking the stationarity of data
+Stationary time series are defined as those whose statistical properties such as mean and variance remain unchanged over time. Our verification of time-series stationarity is necessary because a time series model cannot be
+generated if it is not stationary. Using the rolling statistics
+plots in conjunction with the augmented Dickey-Fuller test
+results, we will be able to verify it. In Dickey-Fuller analysis, the null hypothesis is that a unit root is present in a
+time series model. An alternate hypothesis is the stationarity of the model. On the other hand, if the series is integrated, then positive changes and negative changes will
+happen with probabilities that are independent of the current level; in a random walk, your current position does not
+influence which way you will go next.
 
+As Figure. 6 in the Appendix shows rolling mean for
+the basic data is increasing. Accordingly, the time series
+does not appear to be stationary. Furthermore, the p-value
+is greater than 5%, which means the null hypothesis cannot
+be rejected. In the augmented Dickey-Tuller statistic, the
+test statistic is negative. As it becomes more negative, the
+stronger the rejection of the hypothesis that there is a unit
+root. As the parameters in Figure. 6 shows -1.74 is greater
+than the -2.86 critical value at the %95 confidence bound.
+Therefore, we cannot reject the null hypothesis. Then to
+make our time series stationary, we applied some transformations.
+
+Time series patterns can be classified into three categories: trend, seasonality, and cycles. A trend-cycle component, a seasonal component, and a remainder component
+(the rest of the time series) are usually combined, thus giving us a trend-cycle component, a seasonal component, and
+a remainder component. Figure. 8 in the Appendix shows
+these trends for the data.
+
+Time series can be made stationary by estimating trends
+and seasonality and then removing them from the series.
+The next step is to apply the forecasting technique; the last
+step is to transform the forecasted values into the original
+scale by adding the estimated trend and seasonality.In addition, as the time series is constantly increasing, we apply a
+log transform, and a square root transform to flatten it. After
+that, We take the difference of the observation at a particular
+instant with that at the previous instant.
+
+As Figure. 7 in the Appendix shows we achieve significantly better results: The test statistic is significantly lower
+than the critical value of 1%. With more than 99% confidence, we can conclude that this series is stationary. Moreover, as the p-value is inferior to the 5% threshold, the null
+hypothesis is rejected, meaning that the Dickey-Fuller test
+is verified. As a result, the time series is stationary. Now we
+can implement our predictive models.
+
+## 2.3. Predictive Models
+This section provides brief explanation of the methods
+that are used for the goal of this project.
 
