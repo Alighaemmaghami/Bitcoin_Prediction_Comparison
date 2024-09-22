@@ -142,6 +142,7 @@ of over-fitting.
 
 ![Table 1 Results of the Linear Model on Validation Data](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/Tables/Table_1_Results_of_the_Linear_Model_on_Validation_Data.png)
 
+Table 1 Results of the Linear Model on Validation Data
 
 The fourth scenario works better. It uses the return values
 instead of absolute values. This model works better when
