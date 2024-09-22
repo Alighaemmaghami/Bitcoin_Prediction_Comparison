@@ -240,15 +240,19 @@ seasonality and changed our data scaler and as a result the
 performance of all the models improved significantly since
 it omitted the effect of extreme price changes.
 As it can be seen in Figure. 5 our models followed the trends
-very well and can capture most of the changes. Regression
-model performed a little better and could outperform yesterday’s price. It is probably because the price is extremely
-dependent on the previous prices and follows the previous
-prices.
+very well and can capture most of the changes. 
 
 ![Figure 5. Performance Comparisons for all Models](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_5_Performance_Comparisons_for_All_Models.png)
 
-
 Figure 5. Performance Comparisons for all Models
+
+Regression model performed a little better as it can be seen in Table 2. It is probably because the price is extremely
+dependent on the previous prices and follows the previous
+prices.
+
+![Table 2. Models’ Performances](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/Tables/Table_2_Models_Performances_on_Test_Data.png)
+
+Table 2. Models’ Performances on Test Data
 
 ## Appendix
 ![Figure 6. Rolling Mean and Standard Deviation Base Data](https://raw.githubusercontent.com/Alighaemmaghami/Bitcoin_Prediction_Comparison/refs/heads/main/figures/Figure_6_Rolling_Mean_and_Standard_Deviation_base_Data.png)
